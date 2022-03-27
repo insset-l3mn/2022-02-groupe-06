@@ -1,0 +1,80 @@
+<div class="container">
+  <h1 class="text-center mt-3">Questions pour évaluer votre niveau</h1>
+
+  <div class="row d-flex justify-content-center">
+    <form class="needs-validation">
+      <div class="card mt-3">
+        <div class="card-body">
+          <ng-container *ngIf="check && !isQuizeOver" id="Questions">
+            <div class="d-flex justify-content-around py-3">
+              <div class="score">
+                <h5>{{ point }} point</h5>
+              </div>
+              <div class="questionsremain">
+                <span>Question {{ currentquestion + 1 }} sur {{ length }}</span>
+              </div>
+              <div class="time">
+                <span>{{ timer }} sec⏱️</span>
+              </div>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                [ngStyle]="{ width: progress + '%' }"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+
+            <br />
+            <span>Q:{{ questions[currentquestion]?.id }}</span>
+            <h5>{{ questions[currentquestion]?.question }}</h5>
+            <br />
+            <div id="choix">
+              <ol *ngFor="let choix of choix[currentquestion]">
+                <li>
+                  <div
+                    class="card"
+                    appChangeBg
+                    [isCorrect]="choix?.correct"
+                    (click)="
+                      answer(
+                        questions[currentquestion].id,
+                        choix?.correct,
+                        choix?.id
+                      )
+                    "
+                  >
+                    {{ choix.reponse }}
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </ng-container>
+
+          <ng-container *ngIf="isQuizeOver">
+            <div class="d-flex justity-content-center">
+              <div class="result text-center">
+                <h5>
+                  Félicitations!! <br />Vous avez terminé le quiz. <br />
+                  vous trouvez Ci-dessous votre résultat:
+                </h5>
+                <br />
+                <p>Total de tentatives : {{ length }}</p>
+                <p>Total de reponse Correcte :{{ correctanswer }}</p>
+                <p>Total de reponse incorrecte: {{ wronganswer }}</p>
+                <p>Votre Score : {{ point }} Points</p>
+              </div>
+            </div>
+            <button class="btn btn-primary" (click)="addAnswers()">
+              Ouvrer votre graph que compétence
+            </button>
+          </ng-container>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
