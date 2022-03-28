@@ -49,7 +49,7 @@
                         formControlName="name"
                         [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
                         id="name"
-                        placeholder="Your full name"
+                        placeholder="Entrer votre nom"
                       />
 
                       <div
@@ -107,7 +107,7 @@
                           'is-invalid': submitted && f.email.errors
                         }"
                         id="email"
-                        placeholder="hello@coderthemes.com"
+                        placeholder="Entrer votre mail"
                       />
                       <div
                         *ngIf="submitted && f.email.errors"
@@ -139,7 +139,7 @@
                         }"
                         class="form-control"
                         id="password"
-                        placeholder="Enter your password"
+                        placeholder="Entrer votre password"
                       />
                       <div
                         *ngIf="submitted && f.password.errors"
@@ -149,22 +149,6 @@
                           Password is required
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="form-control-label">Role</label>
-                    <div class="input-group input-group-merge">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fa fa-user"></i>
-                        </span>
-                      </div>
-
-                      <select class="form-control" name="" id="">
-                        <option value="Apprennent">Apprennent</option>
-                        <option value="Formateur">Formateur</option>
-                      </select>
                     </div>
                   </div>
 

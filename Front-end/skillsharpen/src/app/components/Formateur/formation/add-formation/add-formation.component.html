@@ -39,11 +39,12 @@
           <select
             name=""
             id=""
-            formControlName="correct"
+            formControlName="competence"
             class="form-control"
-            *ngFor="let cmpt of competence"
           >
-            <option value="{{ cmpt.id }}">{{ cmpt.nomcompetence }}</option>
+            <option *ngFor="let cmpt of competence" value="{{ cmpt.id }}">
+              {{ cmpt.nomcompetence }}
+            </option>
           </select>
         </div>
       </div>

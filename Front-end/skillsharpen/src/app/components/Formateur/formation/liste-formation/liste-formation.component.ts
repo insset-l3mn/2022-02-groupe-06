@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-liste-formation',
   templateUrl: './liste-formation.component.html',
-  styleUrls: ['./liste-formation.component.css']
+  styleUrls: ['./liste-formation.component.css'],
 })
-export class ListeFormationComponent implements OnInit {
+export class ListeFormationFormateurComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

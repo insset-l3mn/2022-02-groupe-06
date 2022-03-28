@@ -13,7 +13,7 @@ export class AddFormationComponent implements OnInit {
   constructor(private formateurS: FormateurService) {
     this.formationForm = new FormGroup({
       nomformation: new FormControl(null, [Validators.required]),
-      comeptence: new FormControl(null, [Validators.required]),
+      competence: new FormControl(null, [Validators.required]),
     });
   }
 

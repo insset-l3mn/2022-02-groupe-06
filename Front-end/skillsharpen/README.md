@@ -1,5 +1,6 @@
 # skillsharpen
 
+is a project to genereate formation depends on your skills graphe and a quiz 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
 ## Development server
@@ -25,3 +26,54 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Structure du projet
+
+app/
+├─account
+ ├─auth
+  ├─login
+  ├─signup
+
+├─components
+ ├─Admin
+    ├─Formateur
+     ├─addFormateur
+     ├─EditFormateur
+     ├─ListFormateur
+     ├─Graphe
+      ├─ListGraph   
+ ├─Apprennent
+    ├─Domaines
+      ├─ListDomaine
+      ├─ListSousDomaine
+    ├─Questions
+      ├─ListQuestion
+    ├─Graphe
+      ├─ListGraph
+
+ ├─Formateur
+    ├─Formation
+      ├─ListFormation
+      ├─ListChapitre
+      ├─AddFormation
+      ├─AddChapitre
+    ├─Questions
+      ├─ListQuestion
+      ├─AddQuestion
+    ├─Graphe
+      ├─ListGraph     
+  ├─Shared
+    ├─NavBar
+    ├─Welcome
+
+ ├─Core
+   ├─Guard
+   ├─Helpers
+   ├─Models
+   ├─services
+   ├─Directives 
+        
+
+
+

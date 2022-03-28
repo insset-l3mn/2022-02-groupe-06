@@ -37,6 +37,7 @@
     "datatables.net-jqui": "^1.11.3",
     "font-awesome": "^4.7.0",
     "ng-wizard": "^1.3.0",
+    "ng2-pdf-viewer": "^8.0.1",
     "ngx-drag-drop": "^13.0.0",
     "ngx-order-pipe": "^2.2.0",
     "rxjs": "~6.6.0",

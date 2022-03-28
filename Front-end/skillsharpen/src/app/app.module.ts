@@ -16,14 +16,11 @@ import { ListFormateurComponent } from './components/Admin/formateur/list-format
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListeQuestionComponent } from './components/Apprenent/Questions/liste-question/liste-question.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SharemoduleModule } from './components/share/sharemodule.module';
+import { SharemoduleModule } from './components/shared/sharemodule.module';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { ChangeBgDirective } from './change-bg.directive';
-import { AddChapitreComponent } from './components/Formateur/formation/add-chapitre/add-chapitre.component';
-import { AgGridModule } from 'ag-grid-angular';
-import { ListeChapitreComponent } from './components/Formateur/formation/liste-chapitre/liste-chapitre.component';
-import { ListeFormationComponent } from './components/Formateur/formation/liste-formation/liste-formation.component';
-import { ListQuestionComponent } from './components/Formateur/Question/list-question/list-question.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.default,
 };
@@ -36,9 +33,6 @@ const ngWizardConfig: NgWizardConfig = {
     EditFormateurComponent,
     ListeQuestionComponent,
     ChangeBgDirective,
-    ListeChapitreComponent,
-    ListeFormationComponent,
-    ListQuestionComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,8 +44,7 @@ const ngWizardConfig: NgWizardConfig = {
     FormsModule,
     ReactiveFormsModule,
     SharemoduleModule,
-    NgWizardModule.forRoot(ngWizardConfig),
-    AgGridModule.withComponents([]),
+    PdfViewerModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

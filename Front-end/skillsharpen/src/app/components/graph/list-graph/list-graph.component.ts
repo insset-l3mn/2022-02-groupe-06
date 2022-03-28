@@ -74,7 +74,7 @@ export class ListGraphComponent implements OnInit {
               },
               {
                 name: 'Js',
-                value: 30,
+                value: 20,
                 link: [],
               },
             ],
@@ -86,11 +86,11 @@ export class ListGraphComponent implements OnInit {
             children: [
               {
                 name: 'Java',
-                value: 40,
+                value: 10,
               },
               {
                 name: 'PHP',
-                value: 30,
+                value: 10,
               },
               {
                 name: 'c#',
@@ -102,16 +102,16 @@ export class ListGraphComponent implements OnInit {
             name: 'FullStack',
             children: [
               {
-                name: 'aws',
-                value: 5,
+                name: 'AWS',
+                value: 10,
               },
               {
-                name: 'html/css/js',
-                value: 20,
+                name: 'Node js',
+                value: 10,
               },
               {
-                name: 'Mobile',
-                value: 20,
+                name: 'Flutter',
+                value: 10,
               },
             ],
           },
