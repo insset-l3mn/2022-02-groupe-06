@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListFormateurComponent } from '../Admin/formateur/list-formateur/list-formateur.component';
+import { GrapheadminComponent } from '../Admin/Graphe/grapheadmin/grapheadmin.component';
 import { AddChapitreComponent } from '../Formateur/formation/add-chapitre/add-chapitre.component';
 import { AddFormationComponent } from '../Formateur/formation/add-formation/add-formation.component';
 import { ListeChapitreComponent } from '../Formateur/formation/liste-chapitre/liste-chapitre.component';
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'listeFormation',
     component: ListeFormationComponent,
+  },
+  {
+    path: 'grapheAdmin',
+    component: GrapheadminComponent,
   },
 ];
 

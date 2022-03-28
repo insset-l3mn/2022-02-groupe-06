@@ -1,4 +1,11 @@
-<h1 class="text-center">Formations</h1>
+<navbar></navbar>
 
-<pdf-viewer [src]="doc" [render-text]="true" style="display: block">
-</pdf-viewer>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let f of formations">
+      <h5>Nom de formation : {{ f.label }}</h5>
+      <br /><br />
+      <aside>{{ f.content }}</aside>
+    </div>
+  </div>
+</div>

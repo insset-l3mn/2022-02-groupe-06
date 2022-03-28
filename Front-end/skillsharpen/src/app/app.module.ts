@@ -20,6 +20,7 @@ import { SharemoduleModule } from './components/shared/sharemodule.module';
 import { NgWizardModule, NgWizardConfig, THEME } from 'ng-wizard';
 import { ChangeBgDirective } from './change-bg.directive';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { GrapheadminComponent } from './components/Admin/Graphe/grapheadmin/grapheadmin.component';
 
 const ngWizardConfig: NgWizardConfig = {
   theme: THEME.default,

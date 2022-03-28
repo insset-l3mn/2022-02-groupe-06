@@ -18,6 +18,7 @@ import { ListQuestionComponent } from '../Formateur/Question/list-question/list-
 import { AgGridModule } from 'ag-grid-angular';
 import { ListeFormationComponent } from './Formation/liste-formation/liste-formation.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { GrapheadminComponent } from '../Admin/Graphe/grapheadmin/grapheadmin.component';
 @NgModule({
   declarations: [
     ListDomaineComponent,
@@ -31,6 +32,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     ListeFormationFormateurComponent,
     ListQuestionComponent,
     ListeFormationComponent,
+    GrapheadminComponent,
   ],
   imports: [
     CommonModule,

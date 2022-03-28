@@ -9,16 +9,15 @@ import { FormateurService } from 'src/app/core/services/formateur.service';
 export class ListeChapitreComponent implements OnInit {
   constructor(private formationS: FormateurService) {}
   rowData: any;
-  ngOnInit(): void {
-    this.formationS.getchapitre().subscribe((res: any) => {
-      this.rowData = res;
-    });
-  }
-
   columnDefs: ColDef[] = [
     { field: 'id' },
     { field: 'label' },
     { field: 'description' },
     { field: 'content' },
   ];
+  ngOnInit(): void {
+    this.formationS.getchapitre().subscribe((res: any) => {
+      this.rowData = res;
+    });
+  }
 }
