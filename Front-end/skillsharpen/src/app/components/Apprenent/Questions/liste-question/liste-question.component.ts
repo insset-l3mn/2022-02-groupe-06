@@ -123,49 +123,21 @@ export class ListeQuestionComponent implements OnInit {
   }
 
   addAnswers() {
-    console.log(this.AnswersForm);
-    this.route.navigate(['graphe']);
-    this.reponseS.addReponse(this.AnswersForm).subscribe((res: any) => {
-      Swal.fire({
-        title: 'Bien Ajouter!!',
-        text: 'Vos réponse ont été ajouté avec succès',
-        icon: 'success',
-      });
-    }),
-      (error: string) => {
-        this.error = error;
-        console.error(this.error);
-      };
+    // console.log(this.AnswersForm);
+     this.route.navigate(['graphe']);
+    // this.reponseS.addReponse(this.AnswersForm).subscribe((res: any) => {
+    //   Swal.fire({
+    //     title: 'Bien Ajouter!!',
+    //     text: 'Vos réponse ont été ajouté avec succès',
+    //     icon: 'success',
+    //   });
+    // }),
+    //   (error: string) => {
+    //     this.error = error;
+    //     console.error(this.error);
+    //   };
   }
 
-  // showPreviousStep(event?: Event) {
-  //   this.ngWizardService.previous();
-  // }
 
-  // showNextStep(event?: Event) {
-  //   this.ngWizardService.next();
-  // }
 
-  // resetWizard(event?: Event) {
-  //   this.ngWizardService.reset();
-  // }
-
-  // setTheme(theme: THEME) {
-  //   this.ngWizardService.theme(theme);
-  // }
-
-  // stepChanged(args: StepChangedArgs) {
-  //   console.log(args.step);
-  // }
-
-  // isValidTypeBoolean: boolean = true;
-
-  // isValidFunctionReturnsBoolean(args: StepValidationArgs) {
-  //   return true;
-  // }
-
-  // isValidFunctionReturnsObservable(args: StepValidationArgs) {
-  //   return of(true);
-  // }
-  AddQuestion() {}
 }

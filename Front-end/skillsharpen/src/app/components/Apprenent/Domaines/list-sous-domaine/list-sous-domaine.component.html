@@ -12,7 +12,9 @@
   <div class="row mt-5">
     <div class="col-md-4" *ngFor="let item of sousdomaine">
       <div class="card">
-        <div class="card-body text-center">{{ item.nomsousdomaine }}</div>
+        <div id="selecteditem" class="card-body text-center">
+          {{ item.nomsousdomaine }}
+        </div>
       </div>
     </div>
   </div>

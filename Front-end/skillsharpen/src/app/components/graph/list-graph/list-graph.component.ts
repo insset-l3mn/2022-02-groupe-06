@@ -4,6 +4,9 @@ import * as am5xy from '@amcharts/amcharts5/xy';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 import { isPlatformBrowser } from '@angular/common';
 import * as am5hierarchy from '@amcharts/amcharts5/hierarchy';
+import { FormateurService } from 'src/app/core/services/formateur.service';
+import { ReponseService } from 'src/app/core/services/reponse.service';
+import { DomaineService } from 'src/app/core/services/domaine.service';
 @Component({
   selector: 'app-list-graph',
   templateUrl: './list-graph.component.html',
@@ -13,6 +16,9 @@ export class ListGraphComponent implements OnInit {
   root?: am5.Root;
   // series: any;
   constructor(
+    private formateurS: FormateurService,
+    private reponseS: ReponseService,
+    private domaineS: DomaineService,
     @Inject(PLATFORM_ID) private platformId: any,
     private zone: NgZone
   ) {}
@@ -23,6 +29,27 @@ export class ListGraphComponent implements OnInit {
         f();
       });
     }
+  }
+  domaine: any;
+  sousdomaine: any;
+  competence: any;
+
+  getDomaine() {
+    this.domaineS.getAll().subscribe((res: any) => {
+      this.domaine = res;
+    });
+  }
+
+  getSousDomaine() {
+    this.sousdomaine.getAll().subscribe((res: any) => {
+      this.sousdomaine = res;
+    });
+  }
+
+  getCompetence() {
+    this.competence.getAll().subscribe((res: any) => {
+      this.competence = res;
+    });
   }
 
   ngAfterViewInit() {
@@ -64,17 +91,13 @@ export class ListGraphComponent implements OnInit {
             children: [
               {
                 name: 'Html',
-                value: 10,
+                value: 0,
                 link: [],
               },
-              {
-                name: 'CSS',
-                value: 30,
-                link: [],
-              },
+
               {
                 name: 'Js',
-                value: 20,
+                value: 40,
                 link: [],
               },
             ],

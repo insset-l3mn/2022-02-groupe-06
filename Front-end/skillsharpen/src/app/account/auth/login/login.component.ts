@@ -51,6 +51,13 @@ export class LoginComponent implements OnInit, AfterViewInit {
     }
 
     this.loading = true;
+    if (this.loginForm.get('email')?.value === 'admin@gmail.com') {
+      this.router.navigate(['grapheAdmin']);
+    } else if (this.loginForm.get('email')?.value === 'test@gmail.com') {
+      this.router.navigate(['Domaine']);
+    } else if (this.loginForm.get('email')?.value === 'formateur@gmail.com') {
+      this.router.navigate(['addFormation']);
+    }
     this.authenticationService
       .login(this.f.email.value, this.f.password.value)
       .pipe(first())
